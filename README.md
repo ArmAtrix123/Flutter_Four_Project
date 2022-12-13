@@ -1,16 +1,32 @@
-# flutterfour
+Тема: Cubit
+Цель работы: Реализовать счетчик при нажатии на кнопку + осуществляет увеличение счетчика, при нажатии на кнопку - осуществляться уменьшение счетчика.
+Если текущая тема устройства светлая, то за одно нажатие должно +1 или -1.
+Если текущая тема устройства темная, то за одно нажатие должно +2 или -2
+1)	Для начала создаем класс, в котором реализуем логику приложения, что при светлой теме добавляется 1, а при темной 2 и так же кнопку уменьшения.
+ ![image](https://user-images.githubusercontent.com/96495867/207313683-1f876ed3-452e-45d3-ade4-8db2f186989f.png)
 
-A new Flutter project.
+Рисунок 14 – логика
+2)	Создаем BlocProvider для того, чтобы внедрить логику Cubit в проект по всему экрану
+ ![image](https://user-images.githubusercontent.com/96495867/207313751-735b7bc0-1e9a-4928-b806-598e34fc1df1.png)
 
-## Getting Started
+Рисунок 15 – BlocProvider
+3)	Создаем метод счетчика и сохранение данных, для того, чтобы если вылетит приложение данные, сохранились и счетчик, который через каждые 5 минут добавляет значение согласно логике приложения
+ ![image](https://user-images.githubusercontent.com/96495867/207314229-6c8629d5-a9d6-4fe7-b0f0-5717410595a6.png)
 
-This project is a starting point for a Flutter application.
+Рисунок 16 – счетчик и сохранение данных
+4)	Метод для прослушивания и обновления данных согласно условиям
+![image](https://user-images.githubusercontent.com/96495867/207314239-6d1a801b-9e2e-44a5-b64e-51dba261be32.png)
+ 
+Рисунок 17 – метод прослушивания 
+5)	Верстка кнопок и самого экрана
+ ![image](https://user-images.githubusercontent.com/96495867/207314267-37cdd72e-d4a5-4d92-9fdd-75d64869efef.png)
 
-A few resources to get you started if this is your first Flutter project:
+Рисунок 18 – верстка
+ ![image](https://user-images.githubusercontent.com/96495867/207314290-867f8708-c353-46ff-a264-021a39903aa7.png)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Рисунок 19 – верстка
+6)	Лист для вывода истории
+ ![image](https://user-images.githubusercontent.com/96495867/207314315-c5fad91c-8e37-4ceb-a410-4b91c7d041e2.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Рисунок 20 – вывод истории в листе
+Вывод: В ходе данной практической работы были получены навыки в работе с Cubit и SharedPreference, сохраняем данные и удаляем, и создали простой счетчик который в зависимости от темы меняет кол-во добавленных значений
